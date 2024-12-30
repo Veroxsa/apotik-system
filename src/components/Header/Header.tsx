@@ -4,32 +4,27 @@ import styles from './Header.module.css';
 
 const Header: React.FC = () => {
   return (
-    <header className={styles.header}>
+    (<header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-          <a>MyWebsite</a>
+          Poliklinik Widyatama
         </Link>
       </div>
       <nav className={styles.nav}>
         <ul>
           <li>
             <Link href="/">
-              <a>Home</a>
+              Ticket
             </Link>
           </li>
           <li>
             <Link href="/about">
-              <a>About</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              <a>Contact</a>
+              Registration
             </Link>
           </li>
         </ul>
       </nav>
-    </header>
+    </header>)
   );
 };
 

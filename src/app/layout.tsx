@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Parking system"
+  title: "Poliklinik System"
 };
 
 export default function RootLayout({
