@@ -1,9 +1,26 @@
+"use client";
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "../assets/custom.css";
 
 const Register = () => {
+  // State for the form inputs
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
+
+  // State for error messages
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
+
   return (
     <>
       <main className="container">

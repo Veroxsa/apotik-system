@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     (<header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-          Poliklinik Widyatama
+          Poliklinik Sehat Aja
         </Link>
       </div>
       <nav className={styles.nav}>

@@ -9,3 +9,7 @@ html, body {
 .container {
   margin: 0 auto;
 }
+
+.ticket-wrapper {
+  text-align: center;
+}
