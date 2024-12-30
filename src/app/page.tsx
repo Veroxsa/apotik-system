@@ -1,8 +1,13 @@
+import React from "react";
+import Header from "../components/Header";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <>
+      <Header />
+      <main>
+      </main>
+    </>
   );
 }
+export default HomePage;
