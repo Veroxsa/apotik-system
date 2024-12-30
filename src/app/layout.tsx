@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Poliklinik System"
+  title: "Poliklinik Widyatama"
 };
 
 export default function RootLayout({
