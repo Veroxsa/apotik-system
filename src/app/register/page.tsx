@@ -63,6 +63,8 @@ const Register = () => {
           icon: "success",
           title: "Registration Successful",
           text: result.message || "You have been successfully registered!",
+        }).then(function() {
+          window.location = "/";
         });
       } else {
         Swal.fire({
