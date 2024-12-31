@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import Swal from "sweetalert2"
 import "../assets/custom.css";
 
 const Register = () => {
@@ -58,13 +59,24 @@ const Register = () => {
 
       // Check if result is an expected JSON object
       if (result && result.success !== undefined) {
-        setMessage(result.message);
+        Swal.fire({
+          icon: "success",
+          title: "Registration Successful",
+          text: result.message || "You have been successfully registered!",
+        });
       } else {
-        setMessage('Unexpected response format.');
+        Swal.fire({
+          icon: "error",
+          title: "Registration Failed",
+          text: result.message || "There was an error while registering.",
+        });
       }
     } catch (error) {
-      console.error('Error during registration:', error);
-      setMessage('Something went wrong!');
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong, please try again later.",
+      });
     }
   };
 

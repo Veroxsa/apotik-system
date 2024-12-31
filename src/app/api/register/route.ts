@@ -1,12 +1,11 @@
 import { NextResponse } from 'next/server';
-import db from '../../../lib/db'; // Your database connection
+import db from '../../../lib/db';
 
-// API route to handle registration
+// API route
 export async function POST(req: Request) {
   try {
     const { nama, jenis_kelamin, usia, poliklinik, tanggal_lahir } = await req.json();
 
-    // Check for missing fields
     if (!nama || !jenis_kelamin || !usia || !poliklinik || !tanggal_lahir) {
       return NextResponse.json(
         {
@@ -17,7 +16,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // SQL query to insert user data
+    // query insert data
     const sql = `
       INSERT INTO user (nama, jenis_kelamin, usia, poliklinik, tanggal_lahir, status_ticket, created_at, last_update)
       VALUES (?, ?, ?, ?, ?, 'waiting', NOW(), NOW())`;
@@ -26,7 +25,7 @@ export async function POST(req: Request) {
     // Execute the query
     const [result] = await db.query(sql, values);
 
-    // Success response
+    // result response
     return NextResponse.json({
       success: true,
       message: 'Registration successful',
