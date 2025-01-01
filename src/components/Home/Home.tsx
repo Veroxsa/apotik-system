@@ -5,6 +5,10 @@ import Link from "next/link";
 import "../../App/assets/custom.css";
 
 const Home: React.FC = () => {
+  const [poliklinikCount, setPoliklinikCount] = useState<any>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  
   // const [count, setCount] = useState(0);
   // const handleClick = () => {
   //   setCount(count + 1); // Increment the count by 1
